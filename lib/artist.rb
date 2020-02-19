@@ -24,8 +24,10 @@ class Artist
     find_artists = self.all.select {|artist| artist.name == name}
     if (find_artists.length == 0)
       Artist.new(name)
+      
     else
       return find_artists[0]
+      
     end
   end
 
