@@ -9,7 +9,7 @@ class MP3Importer
   
   
   def self.files
-    Dir.entries(self.path).select {|
+    Dir.entries(self.path).select {|file| file.include?("mp3")}
   end 
   
   def self.import
