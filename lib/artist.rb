@@ -36,3 +36,5 @@ class Artist
       puts song.name
     end
   end
+  
+end 
