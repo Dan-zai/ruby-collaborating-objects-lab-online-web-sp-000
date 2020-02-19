@@ -21,7 +21,7 @@ class Artist
   
   def self.find_or_create_by_name(name)
     
-    matching_artists = self.all.select {|artist| artist.name == name}
+    find_artists = self.all.select {|artist| artist.name == name}
     if (matching_artists.length == 0)
       Artist.new(name)
     else
