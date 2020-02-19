@@ -23,7 +23,14 @@ class Song
   end
 
   def artist_name=(name)
-    matching_artists = Artist.all.select {|artist| artist.name == name}
+    find_artists
+    
+    
+    
+    
+    
+    
+     find_artists = self.all.select {|artist| artist.name == name}
     if (matching_artists.length == 0)
       self.artist = Artist.new(name)
     else
