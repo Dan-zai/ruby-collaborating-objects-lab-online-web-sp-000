@@ -23,29 +23,4 @@ class Song
   end
 
   def artist_name=(name)
-    find_artists
     
-    
-    
-    
-    
-    
-     find_artists = self.all.select {|artist| artist.name == name}
-    if (matching_artists.length == 0)
-      self.artist = Artist.new(name)
-    else
-      self.artist = matching_artists[0]
-    end
-  end
-  
-   def self.find_or_create_by_name(name)
-    
-    find_artists = self.all.select {|artist| artist.name == name}
-    if (find_artists.length == 0)
-      Artist.new(name)
-    else
-      return find_artists[0]
-    end
-  end
-
-end
