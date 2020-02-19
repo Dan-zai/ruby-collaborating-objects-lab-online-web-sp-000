@@ -22,10 +22,10 @@ class Artist
   def self.find_or_create_by_name(name)
     
     find_artists = self.all.select {|artist| artist.name == name}
-    if (matching_artists.length == 0)
+    if (find_artists.length == 0)
       Artist.new(name)
     else
-      matching_artists[0]
+      return find_artists[0]
     end
   end
 
